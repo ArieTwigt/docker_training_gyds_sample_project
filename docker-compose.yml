@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  python-app:
+    image: arykanary/dockergyds:rome
+    command: python app.py
+    deploy:
+        replicas: 2
+    ports:
+      - target: 5000
+
+  rabbitmq:
+     image: "rabbitmq:latest"
+    
